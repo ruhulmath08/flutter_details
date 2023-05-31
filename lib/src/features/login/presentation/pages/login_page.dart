@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_details/src/features/home/presentation/pages/home_page.dart';
 import 'package:flutter_details/src/features/login/presentation/bloc/login_bloc.dart';
+import 'package:flutter_details/src/features/post/presentation/get_all_posts/pages/post_page.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class LoginPage extends StatefulWidget {
@@ -73,7 +74,7 @@ class _LoginPageState extends State<LoginPage> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => const HomePage(),
+              builder: (context) => const PostPage(),
             ),
           );
         } else if (state is ErrorState) {
